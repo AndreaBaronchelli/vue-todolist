@@ -17,7 +17,7 @@
     <div id="app">
         <div class="container">
             <header class="main-header">
-                <h1>DarthList</h1>
+                <h1>ToDarthList</h1>
                 <div class="logo">
                     <img src="./img/PngItem_1005216.png" alt="">
                 </div>
@@ -27,7 +27,8 @@
                 @keyup.enter="addTodo"
                 v-model.trim="newTodo" 
                 type="text"
-                placeholder="Insert Todo Here...">
+                placeholder="Insert Todo Here..."
+                ref="todoInput">
                 <button 
                 @click="addTodo"
                 class="add">Add</button>
@@ -48,6 +49,7 @@
                 </li>
             </ul>
         </div>
+        <footer>For Vader personal use. All others used will be punished with the Force</footer>
         <img class="vader left" src="./img/Daco_4703244.png" alt="">
         <img class="vader right" src="./img/Daco_4703244.png" alt="">
     </div>

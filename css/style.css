@@ -5,6 +5,7 @@
     box-sizing: border-box;
     color: #dfdfdf;
     font-family: Arial, Helvetica, sans-serif;
+    cursor: url(../img/cursor.cur), auto;
 }
 
 #app {
@@ -47,6 +48,7 @@
 
 .main-header h1 {
     font-size: 80px;
+    color: #e22424;
 }
 
 .main-header img {
@@ -127,4 +129,11 @@
 .todo-list i:hover {
     color:#e22424;
     cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
 }

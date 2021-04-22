@@ -40,8 +40,9 @@ const app = new Vue({
                     text: this.newTodo,
                     completed: false,
                 })
-            }
-            this.newTodo = ""
+            };
+            this.newTodo = "";
+            this.$refs.todoInput.focus();
         },
         removeTodo(index) {
             this.todos.splice(index, 1)
