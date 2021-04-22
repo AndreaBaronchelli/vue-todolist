@@ -43,9 +43,12 @@
                         <img src="./img/Daco_283756.png" alt="">
                         <span class="text">{{todo.text}}</span>
                     </div>
-                    <i
-                    @click="removeTodo(index)" 
-                    class="fas fa-minus-circle"></i>
+                    <div class="li-right">
+                        <i class="fas fa-pencil-alt"></i>
+                        <i
+                        @click="removeTodo(index)"
+                        class="fas fa-minus-circle"></i>
+                    </div>
                 </li>
             </ul>
         </div>
