@@ -33,12 +33,16 @@
                 class="add">Add</button>
             </div>
             <ul class="todo-list">
-                <li v-for="todo in todos">
+                <li v-for="(todo, index) in todos">
                     <span class="text">{{todo.text}}</span>
-                    <i class="fas fa-minus-circle"></i>
+                    <i
+                    @click="removeTodo(index)" 
+                    class="fas fa-minus-circle"></i>
                 </li>
             </ul>
         </div>
+        <img class="vader left" src="./img/Daco_4703244.png" alt="">
+        <img class="vader right" src="./img/Daco_4703244.png" alt="">
     </div>
 
     <!-- JS -->
