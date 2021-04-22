@@ -44,9 +44,17 @@
                     class="li-left"
                     @click="completed(index)">
                         <img src="./img/Daco_283756.png" alt="">
-                        <span class="text">{{todo.text}}</span>
+                        <input 
+                        ref="todoText"
+                        @keyup.enter="editSubmit(index)"
+                        type="text" 
+                        :value="todo.text" disabled>
+                        <!-- <span class="text">{{todo.text}}</span> -->
                     </div>
                     <div class="li-right">
+                        <i 
+                        @click="editTodo(index)"
+                        class="fas fa-pencil-alt"></i>
                         <i
                         @click="removeTodo(index)"
                         class="fas fa-minus-circle"></i>

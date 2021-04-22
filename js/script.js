@@ -49,6 +49,19 @@ const app = new Vue({
         },
         completed(index) {
             this.todos[index].completed = ! this.todos[index].completed;
+        },
+        editTodo(index) {
+            this.$refs.todoText[index].disabled = ! this.$refs.todoText[index].disabled;
+            this.$refs.todoText[index].focus();
+
+        },
+        editSubmit(index) {
+            this.todos[index].text = this.$refs.todoText[index].value;
+            this.$refs.todoText[index].blur();
+            this.$refs.todoText[index].classList.add("edited");
+            setTimeout(() => {
+                this.$refs.todoText[index].classList.remove("edited");
+            }, 1000);
         }
     }
 });

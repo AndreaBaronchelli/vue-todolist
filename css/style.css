@@ -97,6 +97,10 @@
     margin-top: 50px;
 }
 
+.todo-list .li-left {
+    flex-grow: 1;
+}
+
 .todo-list li{
     position: relative;
     display: flex;
@@ -107,8 +111,22 @@
     max-width: 100%;
 }
 
-.todo-list li span {
-    padding-left: 30px;
+
+.todo-list li input {
+    width: 70%;
+    outline: none;
+    background: transparent;
+    color: #dfdfdf;
+    border: none;
+    transition: font-size .3s, color .8s;
+}
+
+.todo-list li input.edited {
+    color: #e22424;
+}
+
+.todo-list li input:focus {
+    font-size: 1.1rem;
 }
 
 .todo-list li:before {
