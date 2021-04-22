@@ -30,7 +30,18 @@ const app = new Vue({
                 text: "Destroy Alderaan",
                 completed: false,
             },
-        ]
+        ],
+        newTodo: "",
     },
-    methods: {},
+    methods: {
+        addTodo() {
+            if (this.newTodo != "") {
+                this.todos.push({
+                    text: this.newTodo,
+                    completed: false,
+                })
+            }
+            this.newTodo = ""
+        }
+    }
 });

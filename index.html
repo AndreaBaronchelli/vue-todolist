@@ -23,10 +23,14 @@
                 </div>
             </header>
             <div class="add-todo">
-                <input 
+                <input
+                @keyup.enter="addTodo"
+                v-model.trim="newTodo" 
                 type="text"
                 placeholder="Insert Todo Here...">
-                <button class="add">Add</button>
+                <button 
+                @click="addTodo"
+                class="add">Add</button>
             </div>
             <ul class="todo-list">
                 <li v-for="todo in todos">
