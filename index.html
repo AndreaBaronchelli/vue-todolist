@@ -47,6 +47,7 @@
                         <input 
                         ref="todoText"
                         @keyup.enter="editSubmit(index)"
+                        @keyup.esc="todoBlur(index)"
                         type="text" 
                         :value="todo.text" disabled>
                         <!-- <span class="text">{{todo.text}}</span> -->

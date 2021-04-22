@@ -57,11 +57,14 @@ const app = new Vue({
         },
         editSubmit(index) {
             this.todos[index].text = this.$refs.todoText[index].value;
-            this.$refs.todoText[index].blur();
+            this.todoBlur(index);
             this.$refs.todoText[index].classList.add("edited");
             setTimeout(() => {
                 this.$refs.todoText[index].classList.remove("edited");
             }, 1000);
+        },
+        todoBlur(index) {
+            this.$refs.todoText[index].blur();
         }
     }
 });
