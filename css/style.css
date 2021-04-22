@@ -30,6 +30,8 @@
 }
 
 .container {
+    position: relative;
+    z-index: 1;
     width: 60%;
     margin: 0 auto;
     padding: 20px;
@@ -83,11 +85,38 @@
 }
 
 .todo-list li{
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
     margin-bottom: 20px;
     border-bottom: 1px solid #dfdfdf;
+    max-width: 100%;
+}
+
+.todo-list li span {
+    padding-left: 30px;
+}
+
+.todo-list li:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background:#e22424;
+    left: 34px;
+    top: 33%;
+    transition: width .6s;
+}
+
+.todo-list li.completed:before {
+    width: 50%;
+}
+
+.todo-list li img{
+    width: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .todo-list li:last-child {
@@ -96,5 +125,6 @@
 }
 
 .todo-list i:hover {
+    color:#e22424;
     cursor: pointer;
 }

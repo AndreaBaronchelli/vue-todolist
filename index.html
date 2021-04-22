@@ -33,8 +33,15 @@
                 class="add">Add</button>
             </div>
             <ul class="todo-list">
-                <li v-for="(todo, index) in todos">
-                    <span class="text">{{todo.text}}</span>
+                <li 
+                v-for="(todo, index) in todos"
+                :class="{completed: todo.completed}">
+                    <div 
+                    class="li-left"
+                    @click="completed(index)">
+                        <img src="./img/Daco_283756.png" alt="">
+                        <span class="text">{{todo.text}}</span>
+                    </div>
                     <i
                     @click="removeTodo(index)" 
                     class="fas fa-minus-circle"></i>

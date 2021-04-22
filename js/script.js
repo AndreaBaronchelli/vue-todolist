@@ -46,5 +46,8 @@ const app = new Vue({
         removeTodo(index) {
             this.todos.splice(index, 1)
         },
+        completed(index) {
+            this.todos[index].completed = ! this.todos[index].completed;
+        }
     }
 });
