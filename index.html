@@ -6,12 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- ICONS -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' integrity='sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==' crossorigin='anonymous'/>
     <!-- STYLE -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Darth Vader List</title>
 </head>
 <body>
-    
+    <!-- VUE ENTRY -->
+    <div id="app">
+        <div class="container">
+            <header class="main-header">
+                <h1>DarthList</h1>
+                <div class="logo">
+                    <img src="./img/PngItem_1005216.png" alt="">
+                </div>
+            </header>
+            <div class="add-todo">
+                <input 
+                type="text"
+                placeholder="Insert Todo Here...">
+                <button class="add">Add</button>
+            </div>
+            <ul class="todo-list">
+                <li v-for="todo in todos">
+                    <span class="text">{{todo.text}}</span>
+                    <i class="fas fa-minus-circle"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <!-- JS -->
     <script src="./js/script.js"></script>
 </body>
