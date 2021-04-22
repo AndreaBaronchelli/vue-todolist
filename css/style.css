@@ -138,7 +138,7 @@
     border-radius: 2px;
     left: 34px;
     top: 35%;
-    transition: width .6s;
+    transition: width .9s;
 }
 
 .todo-list li.completed:before {
