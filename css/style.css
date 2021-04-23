@@ -143,6 +143,7 @@
 
 .todo-list li.completed:before {
     width: 50%;
+    box-shadow: 1px 0 15px #e22424;
 }
 
 .todo-list li img{
